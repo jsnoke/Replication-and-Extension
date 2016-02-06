@@ -20,4 +20,4 @@ Datasets included:
 | soc-Epinions1  | Directed       | 508837  | 75879   | Who-trusts-whom network of Epinions.com
 | wiki-Vote      | Directed       | 103689  | 7115    | Wikipedia who-votes-on-whom network
 
-![ca-AstroPh Visualization](ca.AstroPh.pdf)
+![ca-AstroPh Visualization](caAstroPh.pdf)
