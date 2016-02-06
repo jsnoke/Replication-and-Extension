@@ -19,3 +19,5 @@ Datasets included:
 | p2p-Gnutella30 | Directed       | 88328   | 36682   | Gnutella peer to peer network from August 30 2002
 | soc-Epinions1  | Directed       | 508837  | 75879   | Who-trusts-whom network of Epinions.com
 | wiki-Vote      | Directed       | 103689  | 7115    | Wikipedia who-votes-on-whom network
+
+![ca-AstroPh Visualization](ca.AstroPh.pdf)
