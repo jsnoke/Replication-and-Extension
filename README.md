@@ -22,24 +22,24 @@ Datasets included:
 
 ![ca-AstroPh Visualization](visuals/caAstroPhPlot.pdf)
 
-![ca-AstroPh Visualization](visuals/caCondMatPlot.pdf)
+![ca-CondMat Visualization](visuals/caCondMatPlot.pdf)
 
-![ca-AstroPh Visualization](visuals/caHepPhPlot.pdf)
+![ca-HepPh Visualization](visuals/caHepPhPlot.pdf)
 
-![ca-AstroPh Visualization](visuals/citHepPhPlot.pdf)
+![cit-HepPh Visualization](visuals/citHepPhPlot.pdf)
 
-![ca-AstroPh Visualization](visuals/citHepThPlot.pdf)
+![cit-HepTh Visualization](visuals/citHepThPlot.pdf)
 
-![ca-AstroPh Visualization](visuals/enronPlot.pdf)
+![email-Enron Visualization](visuals/enronPlot.pdf)
 
-![ca-AstroPh Visualization](visuals/gnutella1Plot.pdf)
+![oregon1-010331 Visualization](visuals/gnutella1Plot.pdf)
 
-![ca-AstroPh Visualization](visuals/gnutella2Plot.pdf)
+![oregon1-010526 Visualization](visuals/gnutella2Plot.pdf)
 
-![ca-AstroPh Visualization](visuals/oregon1Plot.pdf)
+![p2p-Gnutella25 Visualization](visuals/oregon1Plot.pdf)
 
-![ca-AstroPh Visualization](visuals/oregon2Plot.pdf)
+![p2p-Gnutella30 Visualization](visuals/oregon2Plot.pdf)
 
-![ca-AstroPh Visualization](visuals/socEpinPlot.pdf)
+![soc-Epinions1 Visualization](visuals/socEpinPlot.pdf)
 
-![ca-AstroPh Visualization](visuals/wikiPlot.pdf)
+![wiki-Vote Visualization](visuals/wikiPlot.pdf)
