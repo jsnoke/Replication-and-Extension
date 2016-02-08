@@ -20,4 +20,26 @@ Datasets included:
 | soc-Epinions1  | Directed       | 508837  | 75879   | Who-trusts-whom network of Epinions.com
 | wiki-Vote      | Directed       | 103689  | 7115    | Wikipedia who-votes-on-whom network
 
-![ca-AstroPh Visualization](caAstroPhPlot.pdf)
+![ca-AstroPh Visualization](visuals/caAstroPhPlot.pdf)
+
+![ca-CondMat Visualization](visuals/caCondMatPlot.pdf)
+
+![ca-HepPh Visualization](visuals/caHepPhPlot.pdf)
+
+![cit-HepPh Visualization](visuals/citHepPhPlot.pdf)
+
+![cit-HepTh Visualization](visuals/citHepThPlot.pdf)
+
+![email-Enron Visualization](visuals/enronPlot.pdf)
+
+![oregon1-010331 Visualization](visuals/gnutella1Plot.pdf)
+
+![oregon1-010526 Visualization](visuals/gnutella2Plot.pdf)
+
+![p2p-Gnutella25 Visualization](visuals/oregon1Plot.pdf)
+
+![p2p-Gnutella30 Visualization](visuals/oregon2Plot.pdf)
+
+![soc-Epinions1 Visualization](visuals/socEpinPlot.pdf)
+
+![wiki-Vote Visualization](visuals/wikiPlot.pdf)
