@@ -1,45 +1,20 @@
 # Replication-and-Extension
 Semester project for PLSC 597E
 
-Data as used in replicated paper pulled from Stanford Large Network Dataset Collection https://snap.stanford.edu/data/
+Data as used in replicated paper obtained from the personal website of Ramiro Berardo http://ramiroberardo.weebly.com/research.html
 
 Datasets included:
 
-| Network        | Type           | Edges   | Nodes   | Description                           
-| -------------  |:-------------: | :-----: | :-----: | :------------:                        
-| ca-AstroPh     | Undirected     | 198100  | 18772   | Astrophysics collaboration network    
-| ca-CondMat     | Undirected     | 93497   | 23133   | Condense Matter collaboration network 
-| ca-HepPh       | Undirected     | 118521  | 12008   | High Energy Physics - Phenomenology collaboration network
-| cit-HepPh      | Directed       | 421578  | 34546   | High-energy Physics citation network
-| cit-HepTh      | Directed       | 352807  | 27770   | High-energy Physics theory citation network
-| email-Enron    | Undirected     | 183831  | 36692   | Enron email network
-| oregon1-010331 | Undirected     | 22002   | 10670   | Autonomous systems - Oregon-1
-| oregon1-010526 | Undirected     | 23409   | 11174   | Autonomous systems - Oregon-1
-| p2p-Gnutella25 | Directed       | 54705   | 22687   | Gnutella peer to peer network from August 25 2002
-| p2p-Gnutella30 | Directed       | 88328   | 36682   | Gnutella peer to peer network from August 30 2002
-| soc-Epinions1  | Directed       | 508837  | 75879   | Who-trusts-whom network of Epinions.com
-| wiki-Vote      | Directed       | 103689  | 7115    | Wikipedia who-votes-on-whom network
-
-![ca-AstroPh Visualization](visuals/caAstroPhPlot.pdf)
-
-![ca-CondMat Visualization](visuals/caCondMatPlot.pdf)
-
-![ca-HepPh Visualization](visuals/caHepPhPlot.pdf)
-
-![cit-HepPh Visualization](visuals/citHepPhPlot.pdf)
-
-![cit-HepTh Visualization](visuals/citHepThPlot.pdf)
-
-![email-Enron Visualization](visuals/enronPlot.pdf)
-
-![oregon1-010331 Visualization](visuals/gnutella1Plot.pdf)
-
-![oregon1-010526 Visualization](visuals/gnutella2Plot.pdf)
-
-![p2p-Gnutella25 Visualization](visuals/oregon1Plot.pdf)
-
-![p2p-Gnutella30 Visualization](visuals/oregon2Plot.pdf)
-
-![soc-Epinions1 Visualization](visuals/socEpinPlot.pdf)
+| Networks             | Type           | Edges   | Nodes    | Description                           
+| -------------        |:-------------: | :-----: | :-----:  | :------------:                        
+| wave 1 network.dat   | Directed       | 277     | 194      | 1999 Esturary network
+| wave 2 network.dat   | Directed       | 235     | 125      | 2001 Esturary network
+| -------------        |:-------------: | :-----: | :-----:  | :------------:  
+| Attributes           | Type           | Mean    | Variance | Description   
+| -------------        |:-------------: | :-----: | :-----:  | :------------:  
+| Gov-nongov.dat       | Node           | 0.495   | 0.251    | 0/1 indicator of governmental organization  
+| Prodev-proenv1-7.dat | Node           | 5.557   | 1.999    | 7-point scale measuring prodevelopmental/proenviromental  
+| Trust.dat            | Node           | 5.858   | 3.994    | 1999 10-point scale trustworthiness
+|                      | Node           | 7.805   | 8.268    | 2001 10-point scale trustworthiness
 
 ![wiki-Vote Visualization](visuals/wikiPlot.pdf)
