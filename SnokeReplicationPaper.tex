@@ -65,8 +65,9 @@
 		%\vspace{-1in} 	
 		\usefont{OT1}{bch}{b}{n}
 		\normalfont \normalsize \textsc{Pennsylvania State University} \\ [25pt]
+            \normalfont \normalsize \textsc{PLSC 597E} \\ [25pt]
 		%\horrule{0.5pt} \\[0.2cm]
-		\Large Replication Excercise - Fast Approximation of Betweenness Centrality through Sampling \\
+		\Large Replication Excercise -  Self-Organizing Policy Networks: Risk, Partner, Selection, and Cooperation in Estuaries\\
 		%\horrule{2pt} \\[0.5cm]
 }
 
@@ -81,6 +82,11 @@
 \begin{document}
 \maketitle
 
+\section*{Update}
+I have switched replication studies to "Self-Organizing Policy Networks: Risk, Partner, Selection, and Cooperation in Estuaries." by Berardo and Ramiro. This paper is of interest due to its use of two waves of longitudinal data with missingess in the second wave. The original paper did nothing to account for this missingness. 
+
+I have obtained the complete data, and have replicated most of the summary statistics from Table A2 in the original paper. (The exception being out and in 2-stars - these are not clearly defined and I'm unsure what they mean.) I have yet to run the ERGM model or the MCMC method described. These could present potential difficulties given they do not define their models very specifically, but they do at least give a decent idea.
+
 \section*{Citation}
 Berardo, Ramiro, and John T. Scholz. "Self-Organizing Policy Networks: Risk, Partner, Selection, and Cooperation in Estuaries." American Journal of Political Science 54, no. 3 (2010):632-649.
 
@@ -88,16 +94,12 @@ Berardo, Ramiro, and John T. Scholz. "Self-Organizing Policy Networks: Risk, Par
 \url{https://github.com/jsnoke/Replication-and-Extension}
 
 \section*{Network Visuals}
-Below are visualizations for two of the twelve networks, one directed and one undirected. Some networks are quite large, so to keep the PDF at a managable size the remaining network visualizations are in the git Repo. Please see the README for direct links. Note that some will load slowly.
+Below is a visualization for wave 1. (Working on getting isolates grouped correctly.)
 
-\begin{comment}
 \begin{figure}[!ht]
-      \includegraphics[width=\linewidth]{../visuals/wikiPlot.pdf}
-      \caption{Wikipedia who-votes-on-whom network}\label{fig:x1}
+      \includegraphics[width=\linewidth]{wave1Plot.pdf}
+      \caption{Wave 1 network}\label{fig:x1}
 \end{figure}
-\end{comment}
-
-
 
 
 \end{document}
