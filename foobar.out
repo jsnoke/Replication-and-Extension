@@ -1,0 +1,688 @@
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 12/03/2016 12:18:00
+New results follow.
+-----------------------------------
+
+Siena version 1.1-232 (18 Jun 13)
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 180842.
+Effects object used: myEff 
+Model Type 1: Standard actor-oriented model
+Estimation method: unconditional moment estimation.
+
+Time duration for simulations is 1.0.
+Standard errors are estimated with the likelihood ratio method.
+Initial value of gain parameter is  0.2000000.
+Number of subphases in Phase 2 is 4.
+
+Initial parameter values are 
+  1. rate:  basic rate parameter testNet                    2.7353
+  2. eval:  outdegree (density)                            -1.6555
+  3. eval:  reciprocity                                     0.0000
+  4. eval:  transitive triplets                             0.0000
+  5. eval:  indegree - popularity                           0.0000
+  6. eval:  prodevAtt alter                                 0.0000
+  7. eval:  prodevAtt ego                                   0.0000
+  8. eval:  prodevAtt similarity                            0.0000
+  9. eval:  govAtt alter                                    0.0000
+ 10. eval:  govAtt ego                                      0.0000
+ 11. eval:  govAtt similarity                               0.0000
+ 12. eval:  trustAtt alter                                  0.0000
+ 13. eval:  trustAtt ego                                    0.0000
+ 14. eval:  trustAtt similarity                             0.0000
+ 15. rate:  rate trustAtt period 1                          3.8139
+ 16. eval:  behavior trustAtt linear shape                 -0.0063
+ 17. eval:  behavior trustAtt average alter                 0.0000
+ 18. eval:  behavior trustAtt: effect from prodevAtt        0.0000
+ 19. eval:  behavior trustAtt: effect from govAtt           0.0000
+ 20. eval:  behavior trustAtt: effect from trustCo          0.0000
+
+
+Observed values of target statistics are
+  1. Amount of network change                                           254.0000
+  2. Number of ties                                                     235.0000
+  3. Number of reciprocated ties                                         50.0000
+  4. Number of transitive triplets                                      121.0000
+  5. Sum of squared indegrees                                          204282.0000
+  6. Sum of indegrees x prodevAtt                                        26.1778
+  7. Sum of outdegrees x prodevAtt                                       28.3487
+  8. Similarity on prodevAtt                                              9.8265
+  9. Sum of indegrees x govAtt                                           38.7113
+ 10. Sum of outdegrees x govAtt                                          28.7113
+ 11. Similarity on govAtt                                                20.0963
+ 12. Sum of indegrees x trustAtt                                        -45.2592
+ 13. Sum of outdegrees x trustAtt                                         1.7408
+ 14. Similarity on trustAtt                                               8.1012
+ 15. Amount of behavioral change                                        176.0000
+ 16. beh. trustAtt cent. sum                                             13.8196
+ 17. beh. trustAtt average alters                                        39.0093
+ 18. beh. trustAtt x prodevAtt                                          -33.1279
+ 19. beh. trustAtt x govAtt                                              17.4001
+ 20. beh. trustAtt x trustCo                                            217.0007
+
+ 20 parameters, 20 statistics
+
+Estimation of derivatives by the LR method (type 1).
+
+@2
+End of stochastic approximation algorithm, phase 3.
+---------------------------------------------------
+
+Total of 3894 iterations.
+Parameter estimates based on 2894 iterations,
+convergence diagnostics, covariance and derivative matrices based on 1000 iterations.
+
+Information for convergence diagnosis.
+Averages, standard deviations, and t-ratios for deviations from targets:
+  1.    -0.2400    13.4037  -0.0179 
+  2.    -0.1640    20.1021  -0.0082 
+  3.    -0.2000    11.0208  -0.0181 
+  4.    -3.5410    36.2105  -0.0978 
+  5. -1118.6040 34179.8846  -0.0327 
+  6.     0.0221    18.3369   0.0012 
+  7.     0.6754    15.3312   0.0441 
+  8.     0.0153     2.1737   0.0070 
+  9.     0.1572     9.4343   0.0167 
+ 10.    -0.2328     6.8126  -0.0342 
+ 11.    -0.2164     6.6948  -0.0323 
+ 12.     0.0372    35.9862   0.0010 
+ 13.     0.6302    22.5215   0.0280 
+ 14.    -0.0920     2.4205  -0.0380 
+ 15.     0.2200    13.0730   0.0168 
+ 16.    -0.5980    19.9214  -0.0300 
+ 17.    -0.3263    33.4925  -0.0097 
+ 18.     0.6551    19.9684   0.0328 
+ 19.    -0.2981     9.3477  -0.0319 
+ 20.     0.3744    31.0770   0.0120 
+
+Good convergence is indicated by the t-ratios being close to zero.
+
+
+@2
+Estimation Results.
+-------------------
+
+Regular end of estimation algorithm.
+Total of 3894 iteration steps.
+
+@3
+Estimates and standard errors
+                             
+Network Dynamics
+ 1. rate:  basic rate parameter testNet                  4.8441  (   0.5305)
+ 2. eval:  outdegree (density)                          -2.2366  (   0.1338)
+ 3. eval:  reciprocity                                   0.7229  (   0.2182)
+ 4. eval:  transitive triplets                           0.1609  (   0.0940)
+ 5. eval:  indegree - popularity                         0.2108  (   0.0221)
+ 6. eval:  prodevAtt alter                               0.0169  (   0.0562)
+ 7. eval:  prodevAtt ego                                 0.0042  (   0.0650)
+ 8. eval:  prodevAtt similarity                          0.6097  (   0.4640)
+ 9. eval:  govAtt alter                                  0.2174  (   0.1130)
+10. eval:  govAtt ego                                    0.0091  (   0.1519)
+11. eval:  govAtt similarity                             0.1824  (   0.1423)
+12. eval:  trustAtt alter                                0.0052  (   0.0397)
+13. eval:  trustAtt ego                                 -0.0383  (   0.0614)
+14. eval:  trustAtt similarity                           0.1909  (   0.7566)
+Behavior Dynamics
+
+15. rate:  rate trustAtt period 1                        4.1901  (   0.7276)
+16. eval:  behavior trustAtt linear shape                0.0738  (   0.0686)
+17. eval:  behavior trustAtt average alter               0.1011  (   0.1134)
+18. eval:  behavior trustAtt: effect from prodevAtt     -0.0676  (   0.0622)
+19. eval:  behavior trustAtt: effect from govAtt         0.1348  (   0.1317)
+20. eval:  behavior trustAtt: effect from trustCo       -0.1741  (   0.0678)
+
+@3
+Covariance matrices
+                   
+Covariance matrix of estimates (correlations below diagonal):
+     0.281     -0.016      0.022      0.003      0.001      0.000     -0.005      0.053      0.004     -0.007      0.005      0.000      0.004      0.010     -0.039      0.006      0.014     -0.008     -0.007     -0.007
+    -0.223      0.018     -0.012     -0.005     -0.002     -0.001     -0.001     -0.001     -0.001      0.003      0.001     -0.001      0.001     -0.016     -0.017      0.000      0.001      0.001      0.002     -0.001
+     0.194     -0.426      0.048      0.002      0.001     -0.001      0.001      0.004      0.002     -0.012      0.002     -0.001      0.003     -0.020      0.000      0.000      0.002     -0.002      0.001      0.000
+     0.069     -0.361      0.086      0.009     -0.001      0.000      0.000     -0.004     -0.002     -0.003      0.001      0.000      0.001     -0.014     -0.009      0.000      0.001      0.000     -0.001     -0.001
+     0.106     -0.561      0.105     -0.359      0.000      0.000      0.000      0.000      0.000      0.000     -0.001      0.000      0.000      0.004      0.003      0.000      0.000      0.000      0.000      0.000
+     0.008     -0.077     -0.084      0.023      0.072      0.003      0.000     -0.004      0.000      0.000      0.000      0.000      0.000      0.004     -0.003      0.000      0.000      0.000      0.000      0.000
+    -0.133     -0.059      0.045      0.016      0.073     -0.045      0.004     -0.008      0.000     -0.001      0.000      0.000      0.001     -0.002      0.000      0.000      0.001      0.000      0.001      0.000
+     0.214     -0.021      0.036     -0.081     -0.012     -0.135     -0.280      0.215      0.000      0.002      0.001     -0.002     -0.001     -0.037     -0.035      0.001      0.009     -0.002     -0.002     -0.005
+     0.060     -0.060      0.095     -0.202      0.028     -0.027      0.012     -0.008      0.013     -0.002      0.000      0.000     -0.001      0.005      0.012     -0.001     -0.002     -0.001     -0.001      0.001
+    -0.087      0.149     -0.364     -0.201      0.068     -0.042     -0.114      0.025     -0.132      0.023     -0.006      0.001     -0.003      0.010      0.000      0.000      0.000      0.001      0.001      0.000
+     0.068      0.031      0.068      0.094     -0.167      0.015     -0.023      0.015     -0.001     -0.263      0.020      0.001     -0.001     -0.012     -0.024      0.001      0.000      0.000     -0.001     -0.002
+    -0.018     -0.193     -0.087      0.033      0.198      0.221      0.043     -0.089     -0.037      0.113      0.108      0.002     -0.001      0.004      0.002      0.000     -0.001      0.000     -0.001      0.000
+     0.128      0.062      0.235      0.116     -0.101     -0.127      0.236     -0.034     -0.097     -0.274     -0.064     -0.326      0.004     -0.014     -0.007      0.000      0.002      0.000      0.001     -0.001
+     0.025     -0.159     -0.120     -0.198      0.263      0.083     -0.043     -0.105      0.063      0.085     -0.114      0.119     -0.295      0.572      0.129     -0.004     -0.014     -0.001     -0.001      0.009
+    -0.102     -0.170     -0.003     -0.135      0.192     -0.080      0.002     -0.105      0.142      0.004     -0.234      0.085     -0.164      0.234      0.529     -0.014     -0.042      0.001     -0.004      0.038
+     0.168      0.046     -0.001      0.030     -0.034      0.024     -0.007      0.022     -0.077     -0.008      0.060     -0.132      0.111     -0.076     -0.281      0.005      0.002      0.000     -0.002     -0.002
+     0.228      0.054      0.090      0.080     -0.057     -0.011      0.079      0.176     -0.119      0.021     -0.003     -0.192      0.226     -0.163     -0.507      0.297      0.013      0.000      0.003     -0.005
+    -0.234      0.099     -0.157      0.013     -0.058     -0.013     -0.009     -0.071     -0.131      0.065     -0.022     -0.097      0.053     -0.017      0.013     -0.094      0.011      0.004      0.002      0.000
+    -0.102      0.134      0.025     -0.059     -0.106      0.006      0.077     -0.031     -0.067      0.028     -0.060     -0.127      0.118     -0.014     -0.045     -0.206      0.215      0.207      0.017     -0.001
+    -0.191     -0.085     -0.015     -0.147      0.121     -0.008     -0.019     -0.147      0.108      0.011     -0.162      0.076     -0.178      0.185      0.774     -0.328     -0.595      0.028     -0.132      0.005
+
+Derivative matrix of expected statistics X by parameters and
+covariance/correlation matrix of X can be found using
+summary(ans) within R, or by using the 'verbose' option in Siena07.
+ 
+Total computation time 189.45 seconds.
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 12/03/2016 18:39:00
+New results follow.
+-----------------------------------
+
+Siena version 1.1-232 (18 Jun 13)
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 821114.
+Effects object used: myEff 
+Model Type 1: Standard actor-oriented model
+Estimation method: unconditional moment estimation.
+
+Time duration for simulations is 1.0.
+Standard errors are estimated with the likelihood ratio method.
+Initial value of gain parameter is  0.2000000.
+Number of subphases in Phase 2 is 4.
+
+Initial parameter values are 
+  1. rate:  basic rate parameter testNet                    2.7353
+  2. eval:  outdegree (density)                            -1.6555
+  3. eval:  reciprocity                                     0.0000
+  4. eval:  transitive triplets                             0.0000
+  5. eval:  indegree - popularity                           0.0000
+  6. eval:  prodevAtt alter                                 0.0000
+  7. eval:  prodevAtt ego                                   0.0000
+  8. eval:  prodevAtt similarity                            0.0000
+  9. eval:  govAtt alter                                    0.0000
+ 10. eval:  govAtt ego                                      0.0000
+ 11. eval:  govAtt similarity                               0.0000
+ 12. eval:  trustAtt alter                                  0.0000
+ 13. eval:  trustAtt ego                                    0.0000
+ 14. eval:  trustAtt similarity                             0.0000
+ 15. rate:  rate trustAtt period 1                          3.8139
+ 16. eval:  behavior trustAtt linear shape                 -0.0063
+ 17. eval:  behavior trustAtt quadratic shape               0.0000
+ 18. eval:  behavior trustAtt average alter                 0.0000
+ 19. eval:  behavior trustAtt: effect from prodevAtt        0.0000
+ 20. eval:  behavior trustAtt: effect from govAtt           0.0000
+
+
+Observed values of target statistics are
+  1. Amount of network change                                           254.0000
+  2. Number of ties                                                     235.0000
+  3. Number of reciprocated ties                                         50.0000
+  4. Number of transitive triplets                                      121.0000
+  5. Sum of squared indegrees                                          204282.0000
+  6. Sum of indegrees x prodevAtt                                        26.1778
+  7. Sum of outdegrees x prodevAtt                                       28.3487
+  8. Similarity on prodevAtt                                              9.8265
+  9. Sum of indegrees x govAtt                                           38.7113
+ 10. Sum of outdegrees x govAtt                                          28.7113
+ 11. Similarity on govAtt                                                20.0963
+ 12. Sum of indegrees x trustAtt                                        -45.2592
+ 13. Sum of outdegrees x trustAtt                                         1.7408
+ 14. Similarity on trustAtt                                               8.1012
+ 15. Amount of behavioral change                                        176.0000
+ 16. beh. trustAtt cent. sum                                             13.8196
+ 17. beh. trustAtt sum of cent. squares                                 517.4958
+ 18. beh. trustAtt average alters                                        39.0093
+ 19. beh. trustAtt x prodevAtt                                          -33.1279
+ 20. beh. trustAtt x govAtt                                              17.4001
+
+ 20 parameters, 20 statistics
+
+Estimation of derivatives by the LR method (type 1).
+
+@2
+End of stochastic approximation algorithm, phase 3.
+---------------------------------------------------
+
+Total of 4031 iterations.
+Parameter estimates based on 3031 iterations,
+convergence diagnostics, covariance and derivative matrices based on 1000 iterations.
+
+Information for convergence diagnosis.
+Averages, standard deviations, and t-ratios for deviations from targets:
+  1.    -1.6390    13.5414  -0.1210 
+  2.    -2.0790    19.5556  -0.1063 
+  3.    -1.7520    10.6054  -0.1652 
+  4.    -7.2790    33.7089  -0.2159 
+  5. -3198.4780 33383.3061  -0.0958 
+  6.     1.1066    18.0659   0.0613 
+  7.     0.6784    14.2898   0.0475 
+  8.    -0.0188     2.2967  -0.0082 
+  9.    -0.3102     8.9398  -0.0347 
+ 10.    -0.1242     6.6821  -0.0186 
+ 11.    -0.3828     6.7505  -0.0567 
+ 12.    -1.0431    32.7397  -0.0319 
+ 13.     2.8559    23.0748   0.1238 
+ 14.    -0.1092     2.3428  -0.0466 
+ 15.     0.3970    12.4178   0.0320 
+ 16.    -0.3890    21.1687  -0.0184 
+ 17.     0.8045    59.4055   0.0135 
+ 18.    -0.8881    36.5775  -0.0243 
+ 19.    -0.2337    21.0294  -0.0111 
+ 20.    -0.0125     9.4652  -0.0013 
+
+Good convergence is indicated by the t-ratios being close to zero.
+
+
+@2
+Estimation Results.
+-------------------
+
+Regular end of estimation algorithm.
+Total of 4031 iteration steps.
+
+@3
+Estimates and standard errors
+                             
+Network Dynamics
+ 1. rate:  basic rate parameter testNet                  4.8432  (   0.5312)
+ 2. eval:  outdegree (density)                          -2.2395  (   0.1312)
+ 3. eval:  reciprocity                                   0.7119  (   0.2132)
+ 4. eval:  transitive triplets                           0.1581  (   0.1114)
+ 5. eval:  indegree - popularity                         0.2117  (   0.0222)
+ 6. eval:  prodevAtt alter                               0.0178  (   0.0633)
+ 7. eval:  prodevAtt ego                                 0.0056  (   0.0779)
+ 8. eval:  prodevAtt similarity                          0.6075  (   0.4759)
+ 9. eval:  govAtt alter                                  0.2151  (   0.1058)
+10. eval:  govAtt ego                                    0.0157  (   0.1578)
+11. eval:  govAtt similarity                             0.1812  (   0.1258)
+12. eval:  trustAtt alter                                0.0035  (   0.0359)
+13. eval:  trustAtt ego                                 -0.0366  (   0.0603)
+14. eval:  trustAtt similarity                           0.1681  (   0.8409)
+Behavior Dynamics
+
+15. rate:  rate trustAtt period 1                        6.8275  (   1.3536)
+16. eval:  behavior trustAtt linear shape                0.0404  (   0.0522)
+17. eval:  behavior trustAtt quadratic shape            -0.0531  (   0.0167)
+18. eval:  behavior trustAtt average alter               0.0756  (   0.0907)
+19. eval:  behavior trustAtt: effect from prodevAtt     -0.0540  (   0.0442)
+20. eval:  behavior trustAtt: effect from govAtt         0.0844  (   0.0997)
+
+@3
+Covariance matrices
+                   
+Covariance matrix of estimates (correlations below diagonal):
+     0.282     -0.009      0.002      0.011      0.000     -0.009      0.005     -0.007      0.000      0.016     -0.003     -0.004      0.006     -0.010     -0.066      0.005      0.001      0.001      0.003     -0.007
+    -0.131      0.017     -0.011     -0.006     -0.002      0.000      0.001     -0.014      0.001      0.000     -0.001      0.000     -0.001      0.021     -0.008      0.000      0.000      0.001      0.000      0.000
+     0.014     -0.406      0.045      0.001      0.001     -0.001     -0.001     -0.013      0.001     -0.001     -0.001     -0.001      0.001     -0.027     -0.042      0.000      0.000     -0.002      0.000     -0.002
+     0.179     -0.413      0.022      0.012     -0.001     -0.001     -0.001      0.012     -0.001     -0.002      0.001      0.000      0.002     -0.042      0.020      0.001      0.000     -0.001      0.000     -0.002
+    -0.040     -0.519      0.199     -0.388      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.002     -0.004      0.000      0.000      0.000      0.000      0.000
+    -0.274      0.012     -0.100     -0.188      0.073      0.004     -0.001     -0.002      0.000     -0.001      0.000      0.001      0.000      0.006      0.020     -0.001      0.000     -0.001      0.000      0.000
+     0.125      0.066     -0.061     -0.068      0.056     -0.276      0.006     -0.006      0.000      0.001      0.002      0.000      0.000      0.002     -0.014      0.001      0.000      0.002      0.000      0.001
+    -0.029     -0.227     -0.125      0.219     -0.006     -0.077     -0.166      0.227     -0.002     -0.016      0.000      0.000      0.003     -0.060      0.203      0.001      0.000      0.002      0.000      0.004
+     0.001      0.099      0.053     -0.110     -0.113      0.028     -0.021     -0.049      0.011     -0.002      0.000      0.000      0.000      0.007     -0.016      0.000      0.000     -0.001      0.000      0.000
+     0.186     -0.008     -0.017     -0.130      0.077     -0.086      0.052     -0.217     -0.121      0.025     -0.005     -0.001     -0.001      0.013     -0.036      0.000      0.000      0.000      0.000     -0.001
+    -0.048     -0.036     -0.043      0.038      0.021      0.016      0.198     -0.005     -0.012     -0.244      0.016      0.000      0.000     -0.014     -0.011      0.000      0.000      0.001     -0.001      0.000
+    -0.204     -0.053     -0.103     -0.092      0.140      0.273     -0.073     -0.024     -0.093     -0.101      0.035      0.001      0.000     -0.004      0.001      0.000      0.000      0.000      0.000      0.000
+     0.194     -0.082      0.054      0.288     -0.181     -0.058      0.076      0.103     -0.078     -0.122     -0.002     -0.130      0.004     -0.008      0.045      0.000      0.000     -0.002      0.001      0.000
+    -0.023      0.187     -0.149     -0.451      0.112      0.112      0.033     -0.150      0.079      0.099     -0.134     -0.119     -0.157      0.707      0.012     -0.007     -0.001      0.000      0.002      0.014
+    -0.091     -0.046     -0.144      0.134     -0.136      0.237     -0.131      0.315     -0.115     -0.170     -0.063      0.023      0.549      0.010      1.832     -0.017      0.008     -0.059      0.013      0.019
+     0.178     -0.071      0.003      0.152      0.044     -0.205      0.179      0.036     -0.039      0.036      0.050     -0.144     -0.086     -0.153     -0.247      0.003      0.000      0.002      0.000     -0.001
+     0.127     -0.036     -0.030      0.163     -0.141      0.051     -0.092     -0.007      0.049      0.022     -0.072     -0.036      0.384     -0.076      0.351     -0.121      0.000     -0.001      0.000      0.000
+     0.026      0.066     -0.100     -0.106      0.106     -0.187      0.222      0.051     -0.058      0.017      0.115      0.029     -0.426      0.003     -0.477      0.364     -0.599      0.008     -0.001      0.001
+     0.121      0.054     -0.021      0.037     -0.105     -0.061     -0.096      0.021     -0.018      0.024     -0.092     -0.131      0.203      0.059      0.218     -0.132      0.262     -0.184      0.002      0.000
+    -0.129      0.020     -0.072     -0.136      0.033      0.066      0.072      0.075     -0.017     -0.058     -0.001      0.066     -0.080      0.167      0.142     -0.209     -0.239      0.142     -0.005      0.010
+
+Derivative matrix of expected statistics X by parameters and
+covariance/correlation matrix of X can be found using
+summary(ans) within R, or by using the 'verbose' option in Siena07.
+ 
+Total computation time 222.87 seconds.
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 12/03/2016 18:54:08
+New results follow.
+-----------------------------------
+
+Siena version 1.1-232 (18 Jun 13)
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 768879.
+Effects object used: myEff 
+Model Type 1: Standard actor-oriented model
+Estimation method: unconditional moment estimation.
+
+Time duration for simulations is 1.0.
+Standard errors are estimated with the likelihood ratio method.
+Initial value of gain parameter is  0.2000000.
+Number of subphases in Phase 2 is 4.
+
+Initial parameter values are 
+  1. rate:  basic rate parameter testNet                    2.7353
+  2. eval:  outdegree (density)                            -1.6555
+  3. eval:  reciprocity                                     0.0000
+  4. eval:  transitive triplets                             0.0000
+  5. eval:  indegree - popularity                           0.0000
+  6. eval:  prodevAtt alter                                 0.0000
+  7. eval:  prodevAtt ego                                   0.0000
+  8. eval:  prodevAtt similarity                            0.0000
+  9. eval:  govAtt alter                                    0.0000
+ 10. eval:  govAtt ego                                      0.0000
+ 11. eval:  govAtt similarity                               0.0000
+ 12. eval:  trustAtt alter                                  0.0000
+ 13. eval:  trustAtt ego                                    0.0000
+ 14. eval:  trustAtt similarity                             0.0000
+ 15. rate:  rate trustAtt period 1                          3.8139
+ 16. eval:  behavior trustAtt linear shape                 -0.0063
+ 17. eval:  behavior trustAtt quadratic shape               0.0000
+ 18. eval:  behavior trustAtt average similarity            0.0000
+ 19. eval:  behavior trustAtt: effect from prodevAtt        0.0000
+ 20. eval:  behavior trustAtt: effect from govAtt           0.0000
+
+
+Observed values of target statistics are
+  1. Amount of network change                                           254.0000
+  2. Number of ties                                                     235.0000
+  3. Number of reciprocated ties                                         50.0000
+  4. Number of transitive triplets                                      121.0000
+  5. Sum of squared indegrees                                          204282.0000
+  6. Sum of indegrees x prodevAtt                                        26.1778
+  7. Sum of outdegrees x prodevAtt                                       28.3487
+  8. Similarity on prodevAtt                                              9.8265
+  9. Sum of indegrees x govAtt                                           38.7113
+ 10. Sum of outdegrees x govAtt                                          28.7113
+ 11. Similarity on govAtt                                                20.0963
+ 12. Sum of indegrees x trustAtt                                        -45.2592
+ 13. Sum of outdegrees x trustAtt                                         1.7408
+ 14. Similarity on trustAtt                                               8.1012
+ 15. Amount of behavioral change                                        176.0000
+ 16. beh. trustAtt cent. sum                                             13.8196
+ 17. beh. trustAtt sum of cent. squares                                 517.4958
+ 18. beh. trustAtt average similarity                                     2.9083
+ 19. beh. trustAtt x prodevAtt                                          -33.1279
+ 20. beh. trustAtt x govAtt                                              17.4001
+
+ 20 parameters, 20 statistics
+
+Estimation of derivatives by the LR method (type 1).
+
+@2
+End of stochastic approximation algorithm, phase 3.
+---------------------------------------------------
+
+Total of 3466 iterations.
+Parameter estimates based on 2466 iterations,
+convergence diagnostics, covariance and derivative matrices based on 1000 iterations.
+
+Information for convergence diagnosis.
+Averages, standard deviations, and t-ratios for deviations from targets:
+  1.    -1.4020    14.0522  -0.0998 
+  2.    -2.7980    20.5496  -0.1362 
+  3.    -1.1560    10.4002  -0.1112 
+  4.    -8.5740    34.4014  -0.2492 
+  5. -4990.4560 34891.3229  -0.1430 
+  6.    -1.3146    18.0670  -0.0728 
+  7.    -0.3094    14.2717  -0.0217 
+  8.    -0.1220     2.2936  -0.0532 
+  9.    -0.6934     9.4309  -0.0735 
+ 10.    -0.5594     6.7239  -0.0832 
+ 11.    -0.2521     6.8940  -0.0366 
+ 12.     1.9829    34.1168   0.0581 
+ 13.     0.2879    22.6241   0.0127 
+ 14.     0.0141     2.3274   0.0060 
+ 15.     0.3350    13.1079   0.0256 
+ 16.    -0.7710    23.2862  -0.0331 
+ 17.    -1.0422    62.0252  -0.0168 
+ 18.    -0.0432     1.9077  -0.0226 
+ 19.    -0.0434    21.2602  -0.0020 
+ 20.    -0.1055     9.8751  -0.0107 
+
+Good convergence is indicated by the t-ratios being close to zero.
+
+
+@2
+Estimation Results.
+-------------------
+
+Regular end of estimation algorithm.
+Total of 3466 iteration steps.
+
+@3
+Estimates and standard errors
+                             
+Network Dynamics
+ 1. rate:  basic rate parameter testNet                  4.8423  (   0.5690)
+ 2. eval:  outdegree (density)                          -2.2380  (   0.1287)
+ 3. eval:  reciprocity                                   0.7218  (   0.2459)
+ 4. eval:  transitive triplets                           0.1547  (   0.1125)
+ 5. eval:  indegree - popularity                         0.2109  (   0.0236)
+ 6. eval:  prodevAtt alter                               0.0187  (   0.0578)
+ 7. eval:  prodevAtt ego                                 0.0019  (   0.0809)
+ 8. eval:  prodevAtt similarity                          0.6116  (   0.4645)
+ 9. eval:  govAtt alter                                  0.2160  (   0.1282)
+10. eval:  govAtt ego                                    0.0098  (   0.1394)
+11. eval:  govAtt similarity                             0.1908  (   0.1273)
+12. eval:  trustAtt alter                                0.0057  (   0.0430)
+13. eval:  trustAtt ego                                 -0.0368  (   0.0629)
+14. eval:  trustAtt similarity                           0.1824  (   0.8153)
+Behavior Dynamics
+
+15. rate:  rate trustAtt period 1                        6.9090  (   1.2660)
+16. eval:  behavior trustAtt linear shape                0.0435  (   0.0511)
+17. eval:  behavior trustAtt quadratic shape            -0.0079  (   0.0343)
+18. eval:  behavior trustAtt average similarity          3.9995  (   3.2390)
+19. eval:  behavior trustAtt: effect from prodevAtt     -0.0539  (   0.0456)
+20. eval:  behavior trustAtt: effect from govAtt         0.1053  (   0.1346)
+
+@3
+Covariance matrices
+                   
+Covariance matrix of estimates (correlations below diagonal):
+     0.324      0.002     -0.035     -0.014      0.003     -0.006      0.000     -0.030     -0.020     -0.001     -0.006      0.001     -0.008      0.127      0.076     -0.001     -0.003     -0.262      0.004      0.008
+     0.033      0.017     -0.014     -0.006     -0.001     -0.001     -0.001      0.002     -0.003      0.003     -0.001      0.000      0.000     -0.007     -0.006      0.000     -0.001     -0.090      0.000     -0.003
+    -0.250     -0.428      0.060      0.002      0.001      0.000      0.001     -0.003      0.007     -0.009      0.001     -0.001      0.002     -0.038     -0.054      0.001      0.002      0.195      0.000      0.004
+    -0.225     -0.386      0.067      0.013     -0.001      0.001      0.001     -0.001      0.002     -0.003      0.000      0.000      0.001     -0.010     -0.002      0.000      0.001      0.120      0.000      0.002
+     0.252     -0.454      0.099     -0.466      0.001      0.000      0.000      0.000     -0.001      0.000      0.000      0.000      0.000      0.001      0.004      0.000      0.000     -0.012      0.000      0.000
+    -0.189     -0.071     -0.014      0.077     -0.023      0.003     -0.001     -0.005      0.000      0.000      0.000      0.001     -0.001     -0.002      0.009      0.000      0.000      0.013      0.000      0.000
+     0.010     -0.064      0.069      0.067     -0.104     -0.141      0.007     -0.011      0.002      0.001     -0.001      0.000      0.001      0.006     -0.044      0.001      0.001      0.086      0.000      0.002
+    -0.113      0.031     -0.024     -0.025     -0.001     -0.169     -0.289      0.216     -0.007     -0.001      0.002     -0.005      0.006     -0.138      0.104     -0.001     -0.003     -0.355      0.001     -0.013
+    -0.276     -0.156      0.227      0.106     -0.179      0.056      0.225     -0.120      0.016     -0.002     -0.001      0.000      0.001     -0.009     -0.058      0.000      0.002      0.177      0.000      0.004
+    -0.008      0.183     -0.274     -0.208     -0.004      0.057      0.073     -0.017     -0.125      0.019     -0.004      0.001     -0.001      0.018     -0.014      0.000      0.000     -0.018      0.000      0.000
+    -0.085     -0.075      0.040     -0.018      0.083      0.059     -0.105      0.026     -0.059     -0.206      0.016      0.000      0.000     -0.011      0.011      0.000      0.000     -0.045      0.000      0.000
+     0.056     -0.004     -0.116      0.042      0.039      0.285     -0.021     -0.230     -0.029      0.166     -0.069      0.002     -0.001      0.004     -0.002      0.000      0.000      0.030      0.000      0.001
+    -0.222     -0.018      0.157      0.183     -0.137     -0.151      0.245      0.196      0.063     -0.130     -0.034     -0.460      0.004     -0.017     -0.005      0.001      0.000      0.003      0.000     -0.002
+     0.274     -0.071     -0.188     -0.112      0.078     -0.049      0.084     -0.366     -0.083      0.157     -0.103      0.113     -0.327      0.665     -0.064     -0.002      0.000      0.090      0.002      0.026
+     0.105     -0.034     -0.173     -0.013      0.143      0.126     -0.434      0.177     -0.356     -0.080      0.067     -0.036     -0.058     -0.062      1.603     -0.016     -0.024     -2.094     -0.007     -0.053
+    -0.050      0.020      0.110     -0.066      0.045     -0.078      0.140     -0.035      0.064     -0.048     -0.029     -0.163      0.231     -0.051     -0.246      0.003      0.000      0.017      0.000     -0.001
+    -0.131     -0.182      0.237      0.251     -0.119      0.023      0.294     -0.210      0.410     -0.049     -0.068      0.183      0.038     -0.016     -0.543      0.178      0.001      0.100      0.000      0.002
+    -0.142     -0.215      0.245      0.329     -0.161      0.067      0.328     -0.236      0.427     -0.040     -0.109      0.214      0.016      0.034     -0.511      0.105      0.901     10.491     -0.008      0.273
+     0.138     -0.041      0.018     -0.069      0.120     -0.086      0.037      0.053     -0.006     -0.025     -0.066     -0.033     -0.032      0.060     -0.127      0.001     -0.012     -0.057      0.002      0.000
+     0.107     -0.182      0.120      0.135     -0.009      0.048      0.186     -0.209      0.254      0.005     -0.022      0.254     -0.226      0.239     -0.314     -0.151      0.502      0.625      0.036      0.018
+
+Derivative matrix of expected statistics X by parameters and
+covariance/correlation matrix of X can be found using
+summary(ans) within R, or by using the 'verbose' option in Siena07.
+ 
+Total computation time 162.79 seconds.
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 12/03/2016 18:59:07
+New results follow.
+-----------------------------------
+
+Siena version 1.1-232 (18 Jun 13)
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 544175.
+Effects object used: myEff 
+Model Type 1: Standard actor-oriented model
+Estimation method: unconditional moment estimation.
+
+Time duration for simulations is 1.0.
+Standard errors are estimated with the likelihood ratio method.
+Initial value of gain parameter is  0.2000000.
+Number of subphases in Phase 2 is 4.
+
+Initial parameter values are 
+  1. rate:  basic rate parameter testNet                    2.7353
+  2. eval:  outdegree (density)                            -1.6555
+  3. eval:  reciprocity                                     0.0000
+  4. eval:  transitive triplets                             0.0000
+  5. eval:  indegree - popularity                           0.0000
+  6. eval:  prodevAtt alter                                 0.0000
+  7. eval:  prodevAtt ego                                   0.0000
+  8. eval:  prodevAtt similarity                            0.0000
+  9. eval:  govAtt alter                                    0.0000
+ 10. eval:  govAtt ego                                      0.0000
+ 11. eval:  govAtt similarity                               0.0000
+ 12. eval:  trustAtt alter                                  0.0000
+ 13. eval:  trustAtt ego                                    0.0000
+ 14. eval:  trustAtt similarity                             0.0000
+ 15. rate:  rate trustAtt period 1                          3.8139
+ 16. eval:  behavior trustAtt linear shape                 -0.0063
+ 17. eval:  behavior trustAtt quadratic shape               0.0000
+ 18. eval:  behavior trustAtt average similarity            0.0000
+ 19. eval:  behavior trustAtt: effect from prodevAtt        0.0000
+ 20. eval:  behavior trustAtt: effect from govAtt           0.0000
+
+
+Observed values of target statistics are
+  1. Amount of network change                                           254.0000
+  2. Number of ties                                                     235.0000
+  3. Number of reciprocated ties                                         50.0000
+  4. Number of transitive triplets                                      121.0000
+  5. Sum of squared indegrees                                          204282.0000
+  6. Sum of indegrees x prodevAtt                                        26.1778
+  7. Sum of outdegrees x prodevAtt                                       28.3487
+  8. Similarity on prodevAtt                                              9.8265
+  9. Sum of indegrees x govAtt                                           38.7113
+ 10. Sum of outdegrees x govAtt                                          28.7113
+ 11. Similarity on govAtt                                                20.0963
+ 12. Sum of indegrees x trustAtt                                        -45.2592
+ 13. Sum of outdegrees x trustAtt                                         1.7408
+ 14. Similarity on trustAtt                                               8.1012
+ 15. Amount of behavioral change                                        176.0000
+ 16. beh. trustAtt cent. sum                                             13.8196
+ 17. beh. trustAtt sum of cent. squares                                 517.4958
+ 18. beh. trustAtt average similarity                                     2.9083
+ 19. beh. trustAtt x prodevAtt                                          -33.1279
+ 20. beh. trustAtt x govAtt                                              17.4001
+
+ 20 parameters, 20 statistics
+
+Estimation of derivatives by the LR method (type 1).
+
+@2
+End of stochastic approximation algorithm, phase 3.
+---------------------------------------------------
+
+Total of 3463 iterations.
+Parameter estimates based on 2463 iterations,
+convergence diagnostics, covariance and derivative matrices based on 1000 iterations.
+
+Information for convergence diagnosis.
+Averages, standard deviations, and t-ratios for deviations from targets:
+  1.    -0.4200    13.7266  -0.0306 
+  2.    -1.0380    20.1669  -0.0515 
+  3.    -0.9480    10.8412  -0.0874 
+  4.    -5.2080    36.6472  -0.1421 
+  5. -1512.0360 35698.1179  -0.0424 
+  6.     0.2834    17.9926   0.0158 
+  7.    -0.4623    14.7409  -0.0314 
+  8.     0.0011     2.2374   0.0005 
+  9.     0.1316     9.3264   0.0141 
+ 10.     0.1186     6.9790   0.0170 
+ 11.     0.2454     7.0162   0.0350 
+ 12.    -1.2944    35.1819  -0.0368 
+ 13.     0.2156    22.4198   0.0096 
+ 14.    -0.1802     2.3673  -0.0761 
+ 15.     0.5920    13.2856   0.0446 
+ 16.     0.1080    22.6449   0.0048 
+ 17.    -0.5267    64.8996  -0.0081 
+ 18.    -0.0510     1.8490  -0.0276 
+ 19.     0.6496    20.7027   0.0314 
+ 20.    -0.0774     9.5277  -0.0081 
+
+Good convergence is indicated by the t-ratios being close to zero.
+
+
+@2
+Estimation Results.
+-------------------
+
+Regular end of estimation algorithm.
+Total of 3463 iteration steps.
+
+@3
+Estimates and standard errors
+                             
+Network Dynamics
+ 1. rate:  basic rate parameter testNet                  4.8489  (   0.5525)
+ 2. eval:  outdegree (density)                          -2.2402  (   0.1537)
+ 3. eval:  reciprocity                                   0.7253  (   0.2633)
+ 4. eval:  transitive triplets                           0.1591  (   0.0884)
+ 5. eval:  indegree - popularity                         0.2108  (   0.0223)
+ 6. eval:  prodevAtt alter                               0.0181  (   0.0586)
+ 7. eval:  prodevAtt ego                                 0.0014  (   0.0796)
+ 8. eval:  prodevAtt similarity                          0.6081  (   0.4171)
+ 9. eval:  govAtt alter                                  0.2155  (   0.1088)
+10. eval:  govAtt ego                                    0.0086  (   0.1467)
+11. eval:  govAtt similarity                             0.1919  (   0.1230)
+12. eval:  trustAtt alter                                0.0050  (   0.0412)
+13. eval:  trustAtt ego                                 -0.0352  (   0.0519)
+14. eval:  trustAtt similarity                           0.1527  (   0.7437)
+Behavior Dynamics
+
+15. rate:  rate trustAtt period 1                        6.9653  (   1.4922)
+16. eval:  behavior trustAtt linear shape                0.0427  (   0.0491)
+17. eval:  behavior trustAtt quadratic shape            -0.0078  (   0.0234)
+18. eval:  behavior trustAtt average similarity          3.9876  (   1.9984)
+19. eval:  behavior trustAtt: effect from prodevAtt     -0.0531  (   0.0465)
+20. eval:  behavior trustAtt: effect from govAtt         0.1044  (   0.1054)
+
+@3
+Covariance matrices
+                   
+Covariance matrix of estimates (correlations below diagonal):
+     0.305      0.015     -0.013     -0.005     -0.003      0.001      0.001      0.001     -0.001     -0.018      0.005     -0.004      0.008      0.069      0.038     -0.003     -0.003     -0.311     -0.004     -0.004
+     0.179      0.024     -0.022     -0.005     -0.002      0.000      0.000     -0.007      0.003     -0.006      0.002     -0.001      0.000      0.007      0.078      0.000     -0.001     -0.064      0.000      0.000
+    -0.093     -0.547      0.069      0.001      0.001     -0.001     -0.001     -0.005     -0.001      0.002     -0.004      0.001     -0.001     -0.045     -0.097     -0.001      0.001      0.106      0.000      0.004
+    -0.112     -0.396      0.055      0.008      0.000     -0.001      0.000      0.000     -0.001      0.001      0.000      0.000      0.000     -0.007      0.014      0.000      0.000     -0.008      0.000      0.000
+    -0.217     -0.658      0.232     -0.157      0.000      0.000      0.000      0.001     -0.001      0.001      0.000      0.000      0.000      0.000     -0.011      0.000      0.000      0.008      0.000      0.000
+     0.040     -0.044     -0.049     -0.147      0.074      0.003      0.000     -0.001      0.000      0.000      0.001      0.000      0.000      0.003     -0.003      0.000      0.000      0.002      0.000      0.000
+     0.028     -0.026     -0.064     -0.032      0.043     -0.054      0.006     -0.009      0.001      0.002     -0.001     -0.001      0.001      0.003     -0.015      0.000      0.000      0.004      0.000      0.000
+     0.006     -0.101     -0.041     -0.007      0.064     -0.033     -0.279      0.174     -0.003     -0.005     -0.002      0.000      0.000     -0.005     -0.035     -0.001      0.000     -0.008      0.000     -0.001
+    -0.023      0.181     -0.027     -0.068     -0.247     -0.036      0.069     -0.057      0.012     -0.002      0.000     -0.001      0.000     -0.013      0.041      0.000      0.000      0.010      0.000      0.001
+    -0.223     -0.258      0.060      0.039      0.214     -0.045      0.146     -0.083     -0.100      0.022     -0.005      0.000      0.000     -0.017     -0.067      0.000      0.001      0.064      0.000     -0.001
+     0.073      0.112     -0.112     -0.028     -0.074      0.132     -0.124     -0.038      0.032     -0.288      0.015      0.001     -0.001      0.000      0.066     -0.001      0.000     -0.027      0.000      0.001
+    -0.188     -0.151      0.105      0.012      0.270      0.135     -0.160      0.001     -0.193      0.070      0.132      0.002     -0.001     -0.003     -0.007      0.000      0.000      0.011      0.000      0.000
+     0.293      0.011     -0.059      0.004     -0.062      0.008      0.363     -0.017      0.000      0.060     -0.145     -0.270      0.003     -0.001     -0.005      0.000      0.000     -0.018      0.000     -0.001
+     0.167      0.057     -0.230     -0.113      0.011      0.077      0.054     -0.016     -0.165     -0.154      0.004     -0.095     -0.027      0.553      0.027      0.003     -0.001     -0.187     -0.002     -0.013
+     0.046      0.342     -0.248      0.108     -0.322     -0.035     -0.126     -0.057      0.251     -0.307      0.357     -0.107     -0.067      0.024      2.227      0.011     -0.015     -1.181      0.008      0.014
+    -0.120     -0.004     -0.082      0.036      0.045     -0.001      0.086     -0.046      0.008      0.030     -0.089     -0.123      0.097      0.085      0.149      0.002      0.000     -0.016      0.000     -0.001
+    -0.239     -0.195      0.209     -0.051      0.193     -0.015      0.073     -0.044      0.028      0.180     -0.163      0.064     -0.123     -0.071     -0.416     -0.122      0.001      0.038      0.000      0.000
+    -0.282     -0.210      0.202     -0.047      0.185      0.019      0.027     -0.010      0.045      0.218     -0.108      0.137     -0.174     -0.126     -0.396     -0.166      0.820      3.994      0.009      0.046
+    -0.169     -0.024     -0.011      0.045      0.058     -0.072     -0.022      0.007      0.065     -0.002      0.060      0.060     -0.111     -0.051      0.122     -0.108      0.119      0.098      0.002      0.000
+    -0.076      0.024      0.143      0.030     -0.085     -0.003     -0.049     -0.034      0.121     -0.055      0.108      0.023     -0.138     -0.172      0.091     -0.189      0.134      0.218      0.065      0.011
+
+Derivative matrix of expected statistics X by parameters and
+covariance/correlation matrix of X can be found using
+summary(ans) within R, or by using the 'verbose' option in Siena07.
+ 
+Total computation time 166.23 seconds.
