@@ -8,17 +8,17 @@ detach("package:igraph", unload = T)
 #####
 
 ##example...
-myalgorithm <- sienaAlgorithmCreate(nsub=2, n3=100)
+#myalgorithm <- sienaAlgorithmCreate(nsub=2, n3=100)
 # nsub=2 and n3=100 is used here for having a brief computation, not for practice.
-mynet1 <- sienaDependent(array(c(tmp3, tmp4), dim=c(32, 32, 2)))
-mydata <- sienaDataCreate(mynet1)
-myeff <- getEffects(mydata)
-ans <- siena07(myalgorithm, data=mydata, effects=myeff, batch=TRUE)
+#mynet1 <- sienaDependent(array(c(tmp3, tmp4), dim=c(32, 32, 2)))
+#mydata <- sienaDataCreate(mynet1)
+#myeff <- getEffects(mydata)
+#ans <- siena07(myalgorithm, data=mydata, effects=myeff, batch=TRUE)
 
 
-mynet <- sienaDependent(array(c(s501, s502, s503), dim=c(50, 50, 3)))
-mybeh <- sienaDependent(s50a, type='behavior')
-mydata <- sienaDataCreate(mynet, mybeh)
+#mynet <- sienaDependent(array(c(s501, s502, s503), dim=c(50, 50, 3)))
+#mybeh <- sienaDependent(s50a, type='behavior')
+#mydata <- sienaDataCreate(mynet, mybeh)
 
 
 ## test
@@ -27,13 +27,15 @@ trust[trust$V2 == 11, 2] = NA
 proDev[proDev == 11] = NA
 proDev[proDev == 8] = NA
 
-testNet = sienaDependent(array(c(as.matrix(wave.1.network), as.matrix(wave.2.network)), dim=c(194, 194, 2)))
+testNet = sienaDependent(array(c(as.matrix(wave.1.network), as.matrix(wave.2.network)), 
+                               dim=c(194, 194, 2)))
 trustAtt =  sienaDependent(as.matrix(trust), type = "behavior")
 #trustCo = coCovar(as.matrix(trust)[, 1])
 prodevAtt = coCovar(as.matrix(proDev)[, 1])
 govAtt = coCovar(as.matrix(gov)[, 1])
+#trustCo = coCovar(as.matrix(trust)[, 2])
 
-fullNet = sienaDataCreate(testNet, trustAtt, prodevAtt, govAtt)
+fullNet = sienaDataCreate(testNet, trustAtt, prodevAtt, govAtt, trustCo)
 myEff = getEffects(fullNet)
 myEff = includeEffects(myEff, transTrip, inPop)
 myEff = includeEffects(myEff, egoX, altX, simX, interaction1 = "prodevAtt")
@@ -45,13 +47,13 @@ myEff = includeEffects(myEff, name = "trustAtt", effFrom, interaction1 = "prodev
 myEff = includeEffects(myEff, name = "trustAtt", avSim, interaction1 = "testNet")
 
 myEff
-which(myEff$include == TRUE)
-myEff$include[311] = FALSE
-myEff
+#which(myEff$include == TRUE)
+#myEff$include[311] = FALSE
+#myEff
 
 ## simulations
-testAlgorithm = sienaAlgorithmCreate( projname = 'foobar' )
-ans = siena07(testAlgorithm, data = fullNet, effects = myEff)
+testAlgorithm = sienaAlgorithmCreate( projname = 'fullSAO' )
+ans2 = siena07(testAlgorithm, data = fullNet, effects = myEff)
 ans
 ans2 = siena07(testAlgorithm, data = fullNet, effects = myEff)
 ans3 = siena07(testAlgorithm, data = fullNet, effects = myEff)
@@ -106,33 +108,30 @@ plot(fooNet2, displayisolates = F,
      vertex.cex = get.vertex.attribute(fooNet2, "trust")/6)
 
 fooNet %v% "trust" = trust$V1
-proDev$V1[is.na(proDev$V1)] = 5.5
+proDev$V1[proDev$V1 == 11] = 5.5
+proDev$V1[proDev$V1 == 8] = 5.5
 fooNet %v% "prodev" = proDev$V1
 fooNet %v% "gov" = gov$V1
 fooNet %v% "group" = c(rep(1, 19), rep(2, 13), rep(3, 24), rep(4, 21), rep(5, 16),
                        rep(6, 21), rep(7, 25), rep(8, 20), rep(9, 20), rep(10, 15))
-dyadNet = network(cbind(rep(1:194, each = 194), rep(1:194, 194)), directed = T)
-dyadNet %v% "trust" = trust$V1
-dyadNet %v% "prodev" = proDev$V1
-dyadNet %v% "gov" = gov$V1 
 
 test = ergm(fooNet ~ istar(2) + ostar(2) + twopath + ttriple + mutual + 
-                nodeicov("gov") + nodeocov("gov") + nodeicov("prodev") + nodeocov("prodev"), 
-            constraints = ~ blockdiag("group"))
+                nodeifactor("gov") + nodeofactor("gov") + nodeicov("prodev") + nodeocov("prodev") +
+                nodeicov("trust") + nodeocov("trust") + nodematch("gov") + absdiff("prodev") + 
+                absdiff("trust"), 
+            constraints = ~ blockdiag("group"), estimate = "MPLE")
 summary(test)
+mcmc.diagnostics(test)
 
-nodeicov("trust") + nodeicov("gov") +
-    nodeocov("trust") + nodeocov("gov")
-dyadcov(dyadNet, "gov")
 
-test = ergm(fooNet ~ ostar(2) + istar(2) + twopath + ttriple + mutual + 
-                nodeicov("trust") + nodeicov("prodev") + nodeicov("gov") + 
-                nodeocov("trust") + nodeocov("prodev") + nodeocov("gov"), 
-            constraints = ~ blockdiag("group"))
-
-#                nodemix()? + 
-#                edgecov("trust") + edgecov("prodev") + edgecov("gov"))
-
+test = ergm(fooNet ~ istar(2) + ostar(2) + twopath + ttriple + mutual +
+                nodematch("gov") + absdiff("prodev") + absdiff("trust") +
+                nodeofactor("gov"), 
+            constraints = ~ blockdiag("group"), control = control.ergm(MCMLE.maxit = 30))
+summary(test)
+mcmc.diagnostics(test)
+par(mfrow = c(2,2))
+plot(gof(test))
 
 ## test
 #wave.2.network[wave.2.network == 9] = NA
