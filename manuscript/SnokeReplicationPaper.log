@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 MAR 2016 21:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  20 APR 2016 21:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -842,50 +842,58 @@ Package microtype Info: Loading generic settings for font family
  [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<wave1PlotT.pdf, id=41, 494.84875pt x 439.6425pt>
-File: wave1PlotT.pdf Graphic file (type pdf)
- <use wave1PlotT.pdf>
-Package pdftex.def Info: wave1PlotT.pdf used on input line 112.
-(pdftex.def)             Requested size: 455.24373pt x 341.44391pt.
+<wave1plotT.pdf, id=65, 494.84875pt x 439.6425pt>
+File: wave1plotT.pdf Graphic file (type pdf)
+ <use wave1plotT.pdf>
+Package pdftex.def Info: wave1plotT.pdf used on input line 117.
+(pdftex.def)             Requested size: 206.01077pt x 183.02515pt.
 
-<wave2plot.pdf, id=42, 499.8675pt x 439.6425pt>
+<wave2plot.pdf, id=66, 499.8675pt x 439.6425pt>
 File: wave2plot.pdf Graphic file (type pdf)
  <use wave2plot.pdf>
-Package pdftex.def Info: wave2plot.pdf used on input line 119.
-(pdftex.def)             Requested size: 455.2615pt x 341.44391pt.
- [2]
-<betweennessPlot.pdf, id=55, 479.7925pt x 439.6425pt>
+Package pdftex.def Info: wave2plot.pdf used on input line 122.
+(pdftex.def)             Requested size: 206.01077pt x 181.18706pt.
+ [2 <./wave1plotT.pdf> <./wave2plot.pdf>]
+<betweennessPlot.pdf, id=85, 479.7925pt x 439.6425pt>
 File: betweennessPlot.pdf Graphic file (type pdf)
 
 <use betweennessPlot.pdf>
-Package pdftex.def Info: betweennessPlot.pdf used on input line 144.
-(pdftex.def)             Requested size: 455.25119pt x 341.44391pt.
+Package pdftex.def Info: betweennessPlot.pdf used on input line 154.
+(pdftex.def)             Requested size: 206.01077pt x 188.77425pt.
 
-<eigenvectorPlot.pdf, id=56, 479.7925pt x 439.6425pt>
+<eigenvectorPlot.pdf, id=86, 479.7925pt x 439.6425pt>
 File: eigenvectorPlot.pdf Graphic file (type pdf)
 
 <use eigenvectorPlot.pdf>
-Package pdftex.def Info: eigenvectorPlot.pdf used on input line 149.
-(pdftex.def)             Requested size: 455.25119pt x 341.44391pt.
- [3 <./wave1PlotT.pdf>] [4 <./wave2plot.pdf>] [5 <./betweennessPlot.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 308.
- [6 <./eigenvectorPlot.pdf>] [7] [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 308.
+Package pdftex.def Info: eigenvectorPlot.pdf used on input line 159.
+(pdftex.def)             Requested size: 206.01077pt x 188.77425pt.
+ [3 <./betweennessPlot.pdf> <./eigenvectorPlot.pdf>]
+[4] [5]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 324.
 
-(./SnokeReplicationPaper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 308.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 308.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 324.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 343.
+ [6]
+[7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 343.
+ (./SnokeReplicationPaper.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 343.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 343.
 Package rerunfilecheck Info: File `SnokeReplicationPaper.out' has not changed.
-(rerunfilecheck)             Checksum: 5F6FEF296E918C7D9500D87A9A3570AF;374.
+(rerunfilecheck)             Checksum: EDAEE45E81F81C83F50E7BD817EA7754;776.
  ) 
 Here is how much of TeX's memory you used:
- 11574 strings out of 493089
- 174163 string characters out of 6134842
- 336706 words of memory out of 5000000
- 14753 multiletter control sequences out of 15000+600000
+ 11604 strings out of 493089
+ 174630 string characters out of 6134842
+ 331693 words of memory out of 5000000
+ 14775 multiletter control sequences out of 15000+600000
  17143 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,11n,75p,1022b,354s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,11n,75p,1022b,432s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
 b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pf
@@ -897,10 +905,10 @@ sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
 cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on SnokeReplicationPaper.pdf (8 pages, 238083 bytes).
+Output written on SnokeReplicationPaper.pdf (7 pages, 240180 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 132 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 19013 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 184 PDF objects out of 1000 (max. 8388607)
+ 154 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 19061 words of extra memory for PDF output out of 20736 (max. 10000000)
 

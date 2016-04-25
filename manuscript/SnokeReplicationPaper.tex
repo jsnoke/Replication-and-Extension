@@ -108,17 +108,24 @@ I have obtained the complete data from the authors website, and have replicated 
 This study replicated the simple network summary statistics and the Stochastic Actor Oriented model estimates across two waves of networks for cooperation in Estuaries. Extension involves ERGMs and considering alternative methods to deal with missing data prevelant in both the second wave and covariate data.
 
 \subsection{Network Visuals}
+
+
 \begin{figure}[!ht]
-      \includegraphics[width=16cm, height = 12cm]{wave1PlotT.pdf}
+\centering
+\begin{minipage}{.45\textwidth}
+\centering
+      \includegraphics[width=\linewidth]{wave1plotT.pdf}
       \caption{Wave 1 network}\label{fig:x1}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\centering
+\includegraphics[width=\linewidth]{wave2plot.pdf}
+      \caption{Wave 2 network}\label{fig:x2}
+      \end{minipage}
 \end{figure}
+
 
 First, we simply visualize the first wave of the network data. We see as described and plotted in the paper that the network is directed and comprised of ten distinct communities. The nodes are colored by their Estuary group, and the node size is based on a covariate measured at each wave of how ``trustworthy'' a node was. Interestingly, there are also a number of isolates (not shown) which are not mentioned in the paper. In wave 2 we see that the network is substantially smaller, and the missingness is not even across Estuaries. This will lead to the extension of interest, namely imputing data.
-
-\begin{figure}[!ht]
-      \includegraphics[width=16cm, height = 12cm]{wave2plot.pdf}
-      \caption{Wave 2 network}\label{fig:x2}
-\end{figure}
 
 \subsection{Network Exploration}
 To further explore the network, we consider some network statistics. This is not part of the replication, as these exact statistics were not covered in the original paper, but it will help to better understand the data. Table \ref{tab07} gives results across the two waves for reciprocity, transitivity, betweenness centrality, and eigenvector centrality.
@@ -141,13 +148,17 @@ To further explore the network, we consider some network statistics. This is not
 We see that all statistics increase for the second wave, which is interesting given its smaller number of nodes. Reciprocity and transitivity tell us that in the second wave, nodes are slightly more likely to recipricate ties and to tie with a third node if already tied to a second node which is tied to the third. Neither of the centrality measures are particularly high in either network. Figures \ref{fig:x3} and \ref{fig:x4} give histograms of the centralities across all nodes for the two waves. We see both have fairly long tail distributions.
 
 \begin{figure}[!ht]
-      \includegraphics[width=16cm, height = 12cm]{betweennessPlot.pdf}
-      \caption{Betweenness Centrality Distribution}\label{fig:x3}
-\end{figure}
-
-\begin{figure}[!ht]
-      \includegraphics[width=16cm, height = 12cm]{eigenvectorPlot.pdf}
-      \caption{Eigenvector Centrality Distribution}\label{fig:x4}
+\centering
+\begin{minipage}{.45\textwidth}
+\centering
+      \includegraphics[width=\linewidth]{betweennessPlot.pdf}
+      \caption{Betweenness Centrality Dist.}\label{fig:x3}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\centering
+\includegraphics[width=\linewidth]{eigenvectorPlot.pdf}
+      \caption{Eigenvector Centrality Dist.}\label{fig:x4}
+      \end{minipage}
 \end{figure}
 
 \subsection{Descriptive Statistics}
@@ -184,8 +195,8 @@ First, we see that the general covariate descriptive statistics in table \ref{ta
  		Number of mutual dyads & 30 & \textbf{28} \\
  		Numer of asymmetric dyads & 217 & \textbf{143} \\
  		Number of transitive triplets & \textbf{72} & \textbf{51} \\
- 		Number of out 2-stars & \textbf{193} & \textbf{105} \\
- 		Number of in 2-stars & \textbf{509} & \textbf{346} \\
+ 		Number of out 2-stars & 205 & \textbf{116} \\
+ 		Number of in 2-stars & 533 & \textbf{398} \\
  		Number of 2-path & 505 & \textbf{318} \\
  		Missing data fraction & 0.00 & \textbf{0.39} \\
  		\hline
@@ -297,13 +308,37 @@ As these are simulated results the coefficients and standard errors will not be 
  	\end{tabular}
 \end{table}
 
-\begin{comment}
 \subsection{ERGM Models}
-TBD.
+Discussion of ERGM models fit in paper, which are not replicable.
 
 \section{Extension}
-TBD.
-\end{comment}
+Two primary extensions.
+
+\begin{enumerate}
+\item Respecifying ERGM models in order to allow for estimating of ERGM models.
+\item Considering different imputations.
+\end{enumerate}
+
+\subsection{Respecification of ERGM Models}
+\begin{itemize}
+\item Set constraints for outdegree following stated survey design.
+\item Use previous wave as predictor of ties.
+\item Implement a "build-up" modeling approach. First fitting an ERGM with appropriate structural statistics and then fitting successive models that add layers of the authors hypotheses. The goal will be to assess at what layer the model is best.
+\end{itemize}
+
+\subsection{Data Imputation Models}
+\begin{itemize}
+\item Modal imputation.
+\item Carry forward imputation.
+\item MPLE imputation - as a multiple imputation task
+\item MPLE imputation - as a classification task
+\end{itemize}
+
+\subsection{Results - SAO models and new ERGMs with imputation}
+
+\section{Conclusions}
+
+
 
 \end{document}
 

@@ -39,6 +39,9 @@ tC = triad_census(wave1Net)
 names(tC) = c("003", "012", "102", "021D", "021U", "021C", "111D", "111U", "030T", "030C", "201", 
               "120D", "120U", "120C", "210", "300")
 tC
+trantrip = c("030T", "120U", "120D") ## 54 + 3 + 15
+out2 = c("021D"*1, "030T"*1, "120U"*2, "120D"*1, "111U"*1, "120C"*1, "201"*1, "210"*2) ## 53 + 54 + 6 + 15 + 37 + 6 + 16 + 18
+in2 = c("021U"*1, "030T"*1, "120U"*1, "120D"*2, "111D"*1, "120C"*1, "201"*1, "210"*2) ## 286 + 54 + 3 + 30 + 120 + 6 + 16 + 18
 
 #####
 ## wave 2
@@ -56,6 +59,7 @@ for(i in 2:125){
 wave.2.network = wave.2.network[-(removeID[-1]), ]
 wave.2.network = wave.2.network[, -(removeID[-1])]
 wave.2.network[wave.2.network == 10] = 0
+diag(wave.2.network) = 0
 
 wave2Net = graph_from_adjacency_matrix(as.matrix(wave.2.network), mode = "directed")
 V(wave2Net)$group = c(rep(1, 9), rep(2, 10), rep(3, 19), rep(4, 8), rep(5, 8),
@@ -79,6 +83,9 @@ tC = triad_census(wave2Net)
 names(tC) = c("003", "012", "102", "021D", "021U", "021C", "111D", "111U", "030T", "030C", "201", 
               "120D", "120U", "120C", "210", "300")
 tC
+trantrip = c("030T", "120U", "120D") ## 27 + 5 + 19
+out2 = c("021D"*1, "030T"*1, "120U"*2, "120D"*1, "111U"*1, "120C"*1, "201"*1, "210"*2) ## 24 + 27 + 10 + 19 + 7 + 6 + 7 + 16
+in2 = c("021U"*1, "030T"*1, "120U"*1, "120D"*2, "111D"*1, "120C"*1, "201"*1, "210"*2) ## 191 + 54 + 5 + 38 + 81 + 6 + 7 + 16
 
 #####
 ## non-network summary stats

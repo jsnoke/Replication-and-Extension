@@ -1,0 +1,250 @@
+y2*m2
+sum(y2*m2)
+mean(y2*m2)*360
+111591/20000
+yy = y2*m2
+(yy - mean(yy))^2
+sum((yy - mean(yy))^2)
+sum((yy - mean(yy))^2)/15
+360*344*3017.01/16
+23351657/20000
+23351657/20000^2
+sum(yy)
+sum(m2)
+sum(yy)/sum(mm)
+sum(yy)/sum(m2)
+r2 = sum(yy)/sum(m2)
+(yy - r2*m2)^2
+sum((yy - r2*m2)^2)
+360*344*26298.9
+3256855776/(16*15)
+13570232/20000^2
+cor(yy, m2)
+plot(yy, m2)
+plot(yy, m2, xlab = "Total tree height", ylab = "Number of trees")
+y = c(12.06, 11.97, 11.89, 11.76, 11.87, 11.90, 11.91, 11.98, 11.79, 11.98, 12, 11.93, 11.87, 12.02, 11.78, 12.09, 12.39, 12.03, 11.93, 12.04, 12.07, 12.05, 12.08, 12.10, 12.18, 12.01, 12.19, 12.09, 12.21, 12.31, 12.22, 12.16, 12.23, 12.13, 12.24, 12.29, 12.31, 12.35, 12.32, 12.33, 12.37, 12.36)
+length(y)
+mean(y)
+sum(y)
+40*507.79
+40*507.79/1700
+plot(y)
+sample(1:283,6)
+19+283
+19+283+283
+19+283+283+283
+19+283+283+283+283
+19+283+283+283+283+283
+19+283+283+283+283+283+283
+rand = sample(1:242,6)
+ran
+rand
+order(rand)
+sort(rand)
+sort(rand)+242
+sort(rand)+242+242
+sort(rand)+242+242+242
+sort(rand)+242+242+242+242
+sort(rand)+242+242+242+242+242
+sort(rand)+242+242+242+242+242+242
+y1 = c(184, 182, 185, 180)
+y2 = c(134, 148, 138, 150)
+y3 = c(196, 198, 188, 194)
+y4 = c(173, 175, 176, 174)
+y5 = c(223, 187, 204, 192)
+sum(y1)
+sum(y2)
+sum(y3)
+sum(y4)
+sum(y5)
+sum(y1)+sum(y2)+sum(y3)+sum(y4)+sum(y5)
+120/5
+3581*24/480
+3581/5
+yT = c(sum(y1), sum(y2), sum(y3), sum(y4), sum(y5))
+mean(yT)
+sum((yT - mean(yT))^2)
+sum((yT - mean(yT))^2)/4
+120*115*8391.2
+115798560/5
+23159712/480^2
+sqrt(100.5)
+DF = cbind(rbind(y1,y2,y3,y4,y5), rep(1:5, each = 4))
+DF
+DF = cbind(c(y1,y2,y3,y4,y5), rep(1:5, each = 4))
+DF
+anova(lm(DF[,1] ~ DF[,2]))
+1932.1/(119*4)
+7482.9/(120*3)
+4.06*9
+4.06*16
+anova(lm(DF[,1] ~ as.factor(DF[,2])))
+8391.2/(119*4)
+8391.2/(4*4)
+1023.8/(5*3)
+524.45*16
+4*120*3*68.25+119*4*524.5
+347942/360
+966.5/8391.2
+y1 = c(7,5,3)
+y2 = c(4,2,3)
+5*(2*17+2*9)
+260/60
+5*(2*15+2*9)
+30+18
+(30-24)^2 + (18-24)^2
+sum((y1-mean(y1))^2)
+sum((y2-mean(y2))^2)
+80*36
+18*4/3
+18/3
+60^2
+2880+150
+3030/3600
+y1 = c(5, 7, 6, 5, 4, 7, 6, 5, 5, 6)
+y2 = c(7, 7, 7, 6, 5, 4, 7, 5, 6, 6)
+y3 = c(4, 6, 5, 6, 4, 5, 6, 5, 4, 5, 4, 6, 5, 6)
+y4 = 6, 5, 7, 6, 7, 6, 5, 7, 5, 7, 6, 5, 7, 5
+y4 = c(6, 5, 7, 6, 7, 6, 5, 7, 5, 7, 6, 5, 7, 5)
+y5 = c(4, 5, 4, 6, 5, 6, 4, 4, 4)
+y6 = c(5, 7, 6, 4, 4, 3, 2, 5, 5, 6, 4, 3)
+sum(y1)
+sum(y2)
+sum(y3)
+sum(y4)
+sum(y5)
+sum(y6)
+2*56+2.1*60+2*71+(27/14)*84+2*42+2*54
+56/6
+56*734/6
+6850.667/1200
+yhat = c(2*56,2.1*60,2*71,(27/14)*84,2*42,2*54)
+yhat
+sum((yhat - mean(yhat))^2)
+sum((yhat - mean(yhat))^2)/5
+sum((y1-mean(y1))^2)
+sum((y1-mean(y1))^2)/9
+sum((y2-mean(y2))^2)
+sum((y2-mean(y2))^2)/9
+sum((y3-mean(y3))^2)
+sum((y3-mean(y3))^2)/13
+sum((y4-mean(y4))^2)
+sum((y4-mean(y4))^2)/13
+sum((y5-mean(y5))^2)
+sum((y5-mean(y5))^2)/8
+sum((y6-mean(y6))^2)
+sum((y6-mean(y6))^2)/11
+56*50*751.07/6
+56/6
+20*0.933+21*11*1.11/10+28*0.687+27*13*0.769/14+18*0.75+24*2.09
+9.33*146.48
+1200^2
+350499.3+1366.66
+351866/1440000
+Mi = c(20,21,28,27,18,24)
+plot(yhat, Mi)
+summary(lm(yhat~Mi))
+cor(yhat,Mi)
+sum(yhat)/sum(Mi)
+sum((yhat - Mi*5.32)^2)
+56*50/30
+1146.41*93.33
+106994.4+1366.66
+108361.1/1440000
+y1 = c(12, 13, 11, 11, 12)
+y2 = c(8, 8, 9, 7, 9, 7,8)
+y3 = c(15, 14, 13)
+y4 = c(9, 10, 10 )
+y5 = c(13, 13, 12, 12, 12, 11 )
+10*sum(y1)
+10*sum(y2)
+10*sum*y3
+10*sum(y3)
+10*sum(y4)
+10*sum(y5)
+590+560+420+290+730
+2590/5
+518/40
+(mean(y1)-12.95)^2
+(mean(y2)-12.95)^2
+(mean(y3)-12.95)^2
+(mean(y4)-12.95)^2
+(mean(y5)-12.95)^2
+1.32+24.5+1.1+10.8+0.614
+38.33/20
+y1 = c(0,0,0,0)
+y2 = c(0,0,1,0)
+y3 = c(1,1,2,1)
+y4 = c(2,2,2,1)
+y5 = c(1,0,1,0)
+300/5
+15/4
+15/4+12*5/4+10*7/4+16*2/4
+60*44.25
+yhat = c(15/4,12*5/4,10*7/4,16*2/4)
+yhat
+sum((yhat - mean(yhat))^2)
+sum((yhat - mean(yhat))^2)/4
+1/12
+5/12
+7/12
+2/12
+15*11*0.083/4+12*8*0.417/4+10*6*0.583/4+16*12*0.167/4
+40*35*29.95/4
+10482.5+30.19
+Mi
+yhat
+yhat = c(0,yht)
+yhat = c(0,yhat)
+yhat
+Mi = c(18,15,12,10,16)
+cor(yhat,Mi)
+plot(yhat,Mi)
+summary(lm(yhat~Mi))
+sum(yhat)/sum(Mi)
+sum(yhat)/sum(Mi)*4000
+sum((yhat - 0.623*Mi)^2)
+300*295/5
+17700/4
+4425*344.55
+4425*344.55+30.19
+library(optimx)
+install.packages("optimx")
+library(optimx)
+ls
+ls()
+rm(list = ls())
+ls()
+wave.1.network = read.table("wave 1 network.dat", quote="\"", comment.char="")
+wave.2.network = read.table("wave 2 network.dat", quote="\"", comment.char="")
+trust = read.table("Trust.dat", quote="\"", comment.char="")
+proDev = read.table("Prodev-proenv1-7.dat", quote="\"", comment.char="")
+gov = read.table("gov-nongov.dat", quote="\"", comment.char="")
+library(statnet)
+wave.1.network[wave.1.network == 10] = 0 ## change structural zeros to 0 for network object
+wave1Net = network(wave.1.network, directed = T)
+wave1Net ## correct number of nodes, ties
+dyad.census(wave1Net) ## correct
+triad.census(wave1Net) ## correct
+wave.2.network[wave.2.network == 10] = 0 ## change structural zeros to 0 for network object
+which((diag(as.matrix(wave.2.network)) == 9)) ## 74 nodes missing (should be 69)
+which(diag(as.matrix(wave.2.network) == 1)) ## 6 self-loops (should be 0)
+missingInd = which((diag(as.matrix(wave.2.network)) == 9)) ## missing nodes to remove from adjacency matrix
+wave.2.network = wave.2.network[-missingInd, ] ## remove rows
+wave.2.network = wave.2.network[, -missingInd] ## remove cols
+wave2Net = network(wave.2.network, directed = T, loops = T)
+wave2Net ## nodes 120, edges 202 (should be 125 and 235)
+mean(trust$V1) ## correct
+sd(trust$V1) ## correct
+mean(trust$V2[trust$V2 != 11]) ## correct
+sd(trust$V2[trust$V2 != 11]) ## correct
+which(trust$V2 == 11) ## 69 reported missing -- correct!
+c(setdiff(which(diag(as.matrix(wave.2.network)) == 9), which(trust$V2 == 11)),
+c(setdiff(which(diag(as.matrix(wave.2.network)) == 9), which(trust$V2 == 11)),
+c(setdiff(which(diag(as.matrix(wave.2.network)) == 9), which(trust$V2 == 11)),
+setdiff(which(trust$V2 == 11), which(diag(as.matrix(wave.2.network)) == 9)))
+mean(proDev$V1[proDev$V1 != 11]) ## correct
+sd(proDev$V1[proDev$V1 != 11])
+which(proDev$V1 == 8) ## one is coded 8 (max should be 7 and missing is 11)
+mean(gov$V1) ## correct
+sd(gov$V1) ## correct

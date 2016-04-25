@@ -1,0 +1,5 @@
+siena07.r calls robmon.r
+robmon.r calls initializeFRAN.r
+initiliaze FRAN imputes missingness around lines 780~. also lines 850~, 900~, 980~, etc.. In function unpackOneMode
+sienaModelCreate determines FRANname
+unpackBehavior has missingness impute also lines 1450~
