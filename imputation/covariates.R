@@ -10,10 +10,10 @@ covDF = cbind(trust, proDev, gov)
 colnames(covDF) = c("trust1", "trust2", "prodev", "gov")
 
 ## trust wave 2
-x = as.matrix(cbind(rep(1, nrow(covDF$trust1[!is.na(covDF$trust2), drop = F])), 
+x = as.matrix(cbind(rep(1, length(covDF$trust1[!is.na(covDF$trust2), drop = F])), 
                  covDF$trust1[!is.na(covDF$trust2), drop = F]))
 y = as.matrix(covDF$trust2[!is.na(covDF$trust2), drop = F])
-xp = as.matrix(cbind(rep(1, nrow(covDF$trust1[is.na(covDF$trust2), drop = F])), 
+xp = as.matrix(cbind(rep(1, length(covDF$trust1[is.na(covDF$trust2), drop = F])), 
                      covDF$trust1[is.na(covDF$trust2), drop = F]))
 xtx = t(x) %*% x
 pen = 0.00001 * diag(xtx)
@@ -134,8 +134,9 @@ modalDF$prodev[is.na(modalDF$prodev)] = mean(proDev$V1, na.rm = T)
 mean(trust$V2, na.rm = T)
 modalDF$trust2[is.na(modalDF$trust2)] = mean(trust$V2, na.rm = T)
 
+summary(modalDF)
 
-
+save(modalDF, file = "imputation/modalCov.RData")
 
 
 

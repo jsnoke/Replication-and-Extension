@@ -2,6 +2,70 @@
 ## MI proper - logistic regression
 #####
 
+proDev$V1[proDev$V1 == 8] = NA
+proDev$V1[proDev$V1 == 11] = NA
+trust$V2[trust$V2 == 11] = NA
+
+logMIWave2 = vector("list", 10)
+logMICov = vector("list", 10)
+
+set.seed(1959)
+
+for(c in 1:10){
+
+#####
+## covariate multiple impute - normal regression
+#####
+covDF = cbind(trust, proDev, gov)
+colnames(covDF) = c("trust1", "trust2", "prodev", "gov")
+
+## trust wave 2
+x = as.matrix(cbind(rep(1, length(covDF$trust1[!is.na(covDF$trust2), drop = F])), 
+                    covDF$trust1[!is.na(covDF$trust2), drop = F]))
+y = as.matrix(covDF$trust2[!is.na(covDF$trust2), drop = F])
+xp = as.matrix(cbind(rep(1, length(covDF$trust1[is.na(covDF$trust2), drop = F])), 
+                     covDF$trust1[is.na(covDF$trust2), drop = F]))
+xtx = t(x) %*% x
+pen = 0.00001 * diag(xtx)
+if (length(pen)==1) pen = matrix(pen)
+v = solve(xtx + diag(pen))
+coef = t(y) %*% x %*% v
+residuals   = y - x %*% t(coef)
+sigma.star  = sqrt(sum((residuals)^2)/rchisq(1, length(y) - ncol(x)))
+beta.star   = coef + t((chol((v + t(v))/2) %*% rnorm(ncol(x))) * sigma.star)
+parm = list(coef, beta.star, sigma.star)
+names(parm) = c("coef","beta","sigma") 
+res = xp %*% t(parm$beta) + rnorm(nrow(xp)) * parm$sigma
+res = round(res, 1)
+res[res > 10] = 10
+res[res < 0] = 0
+covDF$trust2[is.na(covDF$trust2)] = res
+
+## prodev
+x = as.matrix(cbind(rep(1, nrow(covDF[!is.na(covDF$prodev), 1:2, drop = F])), 
+                    covDF[!is.na(covDF$prodev), 1:2, drop = F]))
+y = as.matrix(covDF$prodev[!is.na(covDF$prodev), drop = F])
+xp = as.matrix(cbind(rep(1, nrow(covDF[is.na(covDF$prodev), 1:2, drop = F])),
+                     covDF[is.na(covDF$prodev), 1:2]))
+xtx = t(x) %*% x
+pen = 0.00001 * diag(xtx)
+if (length(pen)==1) pen = matrix(pen)
+v = solve(xtx + diag(pen))
+coef = t(y) %*% x %*% v
+residuals   = y - x %*% t(coef)
+sigma.star  = sqrt(sum((residuals)^2)/rchisq(1, length(y) - ncol(x)))
+beta.star   = coef + t((chol((v + t(v))/2)) %*% rnorm(ncol(x)) * sigma.star)
+parm = list(coef, beta.star, sigma.star)
+names(parm) = c("coef","beta","sigma") 
+res = xp %*% t(parm$beta) + rnorm(nrow(xp)) * parm$sigma
+res = round(res, 1)
+res[res > 7] = 7
+res[res < 1] = 1
+covDF$prodev[is.na(covDF$prodev)] = res
+
+
+summary(covDF)
+
 #####
 ## setup dataframes
 #####
@@ -92,24 +156,26 @@ waveDF2 = data.frame(waveDF2)
 #####
 
 newTieModel = glm(tie ~ in.star + out.star + twopath + triple + reciprocity + 
-                in.gov + 
-                out.gov + 
-                in.prodev +
-                out.prodev + 
-                in.trust + 
-                out.trust + 
-                match.gov + 
-                diff.prodev + 
-                diff.trust + 
+                #in.gov + 
+                #out.gov + 
+                #in.prodev +
+                #out.prodev + 
+                #in.trust + 
+                #out.trust + 
+                #match.gov + 
+                #diff.prodev + 
+                #diff.trust + 
                 waveDF1$tie, data = waveDF2, family = binomial)
+
 
 fit.sum = summary(newTieModel)
 beta = coef(newTieModel)
-
 rv   = t(chol(fit.sum$cov.unscaled))
+
 betaNew = beta + rv %*% rnorm(ncol(rv))
 
-p = 1 / (1 + exp(-(cbind(rep(1, nrow(predDF)), predDF[ , -1], waveDF1$tie) %*% betaNew)))  
+#p = 1 / (1 + exp(-(cbind(rep(1, nrow(predDF)), predDF[ , -1], waveDF1$tie) %*% betaNew)))  
+p = 1 / (1 + exp(-(cbind(rep(1, nrow(predDF)), predDF[ , c(2:6)], waveDF1$tie) %*% betaNew)))
 newDraw = (runif(nrow(p))<= p)
 newDraw = as.numeric(newDraw) 
 summary(as.factor(newDraw))
@@ -123,7 +189,6 @@ for(a in 1:10){
     
     first = first + groupings[a]^2
 }
-
 
 imputed.Wave.2 = origNet2
 diag(imputed.Wave.2) = 0
@@ -145,8 +210,21 @@ for(a in 1:10){
     first = first + groupings[a]
 }
 
-imputedNetwork = network(imputed.Wave.2, directed = T)
+#####
+## store
+#####
+logMIWave2[[c]] = imputed.Wave.2 
+logMICov[[c]] = covDF
+
+}
+
+save(logMIWave2, file = "imputation/logMIWaveShort.RData")
+save(logMICov, file = "imputation/logMICov.RData")
+
+summary(logMICov[[2]])
+imputedNetwork = network(logMIWave2[[2]], directed = T)
 imputedNetwork
+plot(imputedNetwork)
 
 dyad.census(imputedNetwork)
 summary(degree(imputedNetwork, cmode = "outdegree"))

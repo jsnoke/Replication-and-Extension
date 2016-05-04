@@ -1,6 +1,75 @@
 #####
 ## CART
 #####
+library(rpart)
+library(gdata)
+
+proDev$V1[proDev$V1 == 8] = NA
+proDev$V1[proDev$V1 == 11] = NA
+trust$V2[trust$V2 == 11] = NA
+
+set.seed(64961)
+
+cartMIWave2 = vector("list", 10)
+cartMICov = vector("list", 10)
+
+for(c in 1:10){
+
+#####
+## covariate multiple impute - CART
+#####
+covDF = cbind(trust, proDev, gov)
+colnames(covDF) = c("trust1", "trust2", "prodev", "gov")
+
+## trust wave 2
+x = as.matrix(cbind(rep(1, length(covDF$trust1[!is.na(covDF$trust2), drop = F])), 
+                    covDF$trust1[!is.na(covDF$trust2), drop = F]))
+y = as.matrix(covDF$trust2[!is.na(covDF$trust2), drop = F])
+xp = as.matrix(cbind(rep(1, length(covDF$trust1[is.na(covDF$trust2), drop = F])), 
+                     covDF$trust1[is.na(covDF$trust2), drop = F]))
+
+s = sample(length(y), replace=TRUE)
+fit = rpart(V3 ~ ., data = as.data.frame(cbind(x, y)), method = "anova",
+            minbucket = 5, cp = 1e-04)
+leafnr = floor(as.numeric(row.names(fit$frame[fit$where,])))
+fit$frame$yval = as.numeric(row.names(fit$frame))
+nodes = predict(object = fit, newdata = as.data.frame(xp))
+uniquenodes <- unique(nodes)
+new  <- vector("numeric",nrow(xp))
+for(j in uniquenodes){
+    donors = y[leafnr==j] # values of y in a leaf
+    new[nodes==j] = resample(donors,size=sum(nodes==j),replace=T)
+}
+new[new > 10] = 10
+new[new < 0] = 0
+covDF$trust2[is.na(covDF$trust2)] = new
+
+## prodev
+x = as.matrix(cbind(rep(1, nrow(covDF[!is.na(covDF$prodev), 1:2, drop = F])), 
+                    covDF[!is.na(covDF$prodev), 1:2, drop = F]))
+colnames(x) = c("intercept", "trust1", "trust2")
+y = as.matrix(covDF$prodev[!is.na(covDF$prodev), drop = F])
+xp = as.matrix(cbind(rep(1, nrow(covDF[is.na(covDF$prodev), 1:2, drop = F])),
+                     covDF[is.na(covDF$prodev), 1:2]))
+colnames(xp) = c("intercept", "trust1", "trust2")
+s = sample(length(y), replace=TRUE)
+fit = rpart(V4 ~ ., data = as.data.frame(cbind(x, y)), method = "anova",
+            minbucket = 5, cp = 1e-04)
+leafnr = floor(as.numeric(row.names(fit$frame[fit$where,])))
+fit$frame$yval = as.numeric(row.names(fit$frame))
+nodes = predict(object = fit, newdata = as.data.frame(xp))
+uniquenodes = unique(nodes)
+new = vector("numeric",nrow(xp))
+for(j in uniquenodes){
+    donors = y[leafnr==j] # values of y in a leaf
+    new[nodes==j] = resample(donors,size=sum(nodes==j),replace=T)
+}
+new[new > 7] = 7
+new[new < 1] = 1
+covDF$prodev[is.na(covDF$prodev)] = new
+
+
+summary(covDF)
 
 #####
 ## setup dataframes
@@ -90,24 +159,27 @@ waveDF2 = data.frame(waveDF2)
 #####
 ## estimate and predict
 #####
+
 s = sample(nrow(predDF), replace = TRUE)
 estRpart = rpart(tie ~ in.star + out.star + twopath + triple + reciprocity + 
-                      in.gov + 
-                      out.gov + 
-                      in.prodev +
-                      out.prodev + 
-                      in.trust + 
-                      out.trust + 
-                      match.gov + 
-                      diff.prodev + 
-                      diff.trust + 
+                      #in.gov + 
+                      #out.gov + 
+                      #in.prodev +
+                      #out.prodev + 
+                      #in.trust + 
+                      #out.trust + 
+                      #match.gov + 
+                      #diff.prodev + 
+                      #diff.trust + 
                       waveDF1$tie, data = waveDF2, method = "class", cp = 1e-04, minbucket = 5)
+
 nodes = predict(object = estRpart, 
                 newdata = data.frame(cbind(rep(1, nrow(predDF)), predDF[,-1], waveDF1$tie)))
 #library(gdata)
 new = apply(nodes, MARGIN=1, FUN=function(s) resample(colnames(nodes),size=1,
                                                       prob=s))
 summary(new)
+new = as.numeric(new)
 #new = factor(new,levels=levels(y))  
 
 newDat = vector("list", 10)
@@ -142,7 +214,21 @@ for(a in 1:10){
     first = first + groupings[a]
 }
 
-imputedNetwork = network(imputed.Wave.2, directed = T)
+#####
+## store
+#####
+
+cartMIWave2[[c]] = imputed.Wave.2 
+cartMICov[[c]] = covDF
+    
+}
+
+save(cartMIWave2, file = "imputation/cartMIWaveShort.RData")
+save(cartMICov, file = "imputation/cartMICov.RData")
+
+summary(cartMICov[[1]])
+imputedNetwork = network(cartMIWave2[[1]], directed = T)
+plot(imputedNetwork)
 imputedNetwork
 
 dyad.census(imputedNetwork)

@@ -18,6 +18,8 @@ for(a in 1:nrow(origNet1)){
 carryForwardNetwork = network(carry.forward.impute, directed = T)
 carryForwardNetwork
 
+save(carryForwardNetwork, file = "imputation/carryForward.RData")
+
 dyad.census(carryForwardNetwork)
 summary(degree(carryForwardNetwork, cmode = "indegree"))
 summary(degree(carryForwardNetwork, cmode = "outdegree"))
